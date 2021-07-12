@@ -1,0 +1,17 @@
+{% include 'caretakerheader.html' %}
+<form method="post">
+	<table border="4" align="center">
+		<tr>
+			<th> person first name</th>
+			<th> person last name</th>
+			<th> date time</th>
+		</tr>
+		<tbody>
+			{% for row in data['viewfaces'] %}
+			<tr>
+				<td>{{row['person_first_name']}]</td>
+				<td>{{row['person_last_name']}}</td>
+				<td>{{row['Date_time']}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>	

@@ -1,0 +1,21 @@
+{% include 'publicheader.html' %}
+	<h1 align="center" style="color: #ffff "> LOGIN </h1>
+	<form method="post">
+		<table border="4" align="center" class="table" style="width: 700px">
+			<tr>
+				<th style="color: #ffff "> USERNAME</th>
+				<td> <input type=" text"  name="username" class="form-control" required=""pattern="[a-zA-Z]{0,30}"></td>
+			</tr>
+			<tr>
+				<th style="color: #ffff "> PASSWORD</th>
+				<td><input type="password" name="password" class="form-control" required=""></td>
+			</tr>
+			<tr>
+				<td  colspan="2" align ="center"><input type ="submit" name="submit" value="LOGIN"class="btn btn-success"> </td>
+			</tr>
+		</table>
+			
+	</form>
+	<br><br><br>
+
+{% include 'footer.html' %}

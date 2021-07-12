@@ -1,0 +1,24 @@
+{% include 'adminheader.html' %}
+<br><br><br>
+<form method="post">
+	<table border="4" align="center" class="table" style="width: 700px">
+		<tr>
+			<th> first name</th>
+			<th> last name</th>
+			<th> Phone no</th>
+			<th> Email</th>
+		</tr>
+		<tbody>
+			{% for row in data['viewcaretaker'] %}
+			<tr>
+				<td>{{row['first_name']}}</td>
+				<td>{{row['last_name']}}</td>
+				<td>{{row['phone']}}</td>
+				<td>{{row['Email']}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+		</table>
+		</form>
+		<br><br><br>	
+{% include 'footer.html' %}

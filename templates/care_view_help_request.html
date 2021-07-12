@@ -1,0 +1,25 @@
+{% include 'caretakerheader.html' %}
+<br><br><br><br>
+<form method="post" enctype="multipart/form-data" >
+	<table border="4" align="center" style="width: 700px" class="table">
+		<tr>
+			<th> Blind name</th>
+			<th> Date_time</th>
+			<th> request_status</th>
+			<th> Latitude</th>
+			<th> Longitude</th>
+		</tr>
+		<tbody>
+			{% for row in data['viewhelp'] %}
+			<tr>
+				<td>{{row['Name']}}</td>
+				<td>{{row['Datetime']}}</td>
+				<td>{{row['request_status']}}</td>
+				<td>{{row['Latitude']}}</td>
+				<td>{{row['Longitude']}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>	
+	</table>
+<br><br><br><br>
+{% include 'footer.html' %}

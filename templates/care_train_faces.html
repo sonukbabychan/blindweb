@@ -1,0 +1,38 @@
+{% include 'caretakerheader.html' %}
+<form method="post" enctype="multipart/form-data">
+
+  <table border="4" align="center" class="table" style="width: 700px">
+  	 <tr>
+
+		 <th>Select Blind</label></th>
+		 <td><select name = "id" required class="form-control">
+		    <option value = "">Select</option>
+		    {% for row in data['blind'] %}
+		     <option value = "{{ row['blind_id'] }}">{{row['name']}}</option>
+		  	{% endfor %}
+		 </select>
+	</td></tr>     
+			
+	<tr><th>Image</th>
+		<td><input type="file" name="image">
+		</td></tr>
+	<tr>
+		<th> first Name</th>th>
+		<td><input type="text" name="fname" class="form-control"></td>
+
+	<tr>
+		<th> Last name</th>
+		<td><input type="text" name="lname" class="form-control"></td>
+		<tr>
+		<th>Relation </th>
+		<td><input type="text" name="relation" class="form-control"></td>
+	
+	</tr>
+    <tr><td><input type="submit" name="train" value="Train" class="btn btn-success pull-left"></td>
+    	<td><input type="submit" name="submit" value="Upload" class="btn btn-primary pull-right"></td></tr>
+
+	
+  </table>
+</form>
+  <br><br><br><br>
+{% include 'footer.html' %}

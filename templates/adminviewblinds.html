@@ -1,0 +1,32 @@
+{% include 'adminheader.html' %}
+<br><br><br>
+<form method="post" enctype="multipart/form-data">
+	<table border="4" align="center" class="table" style="width: 700px">
+		<tr>
+			<th bgcolor="grey" style="color: #fff"> first name</th>
+			<th bgcolor="grey" style="color: #fff"> last name</th>
+			<th bgcolor="grey" style="color: #fff"> photo</th>
+			<th bgcolor="grey" style="color: #fff"> Phone no</th>
+			<th bgcolor="grey" style="color: #fff"> Gender</th>
+			<th bgcolor="grey" style="color: #fff"> DOB</th>
+			<th bgcolor="grey" style="color: #fff"> Latitude</th>
+			<th bgcolor="grey" style="color: #fff"> Longitude</th>
+		</tr>
+		<tbody>
+			{% for row in data['viewblind'] %}
+			<tr>
+				<td bgcolor="grey" style="color: #fff">{{row['first_name']}}</td>
+				<td bgcolor="grey" style="color: #fff">{{row['last_name']}}</td>
+				<td bgcolor="grey" style="color: #fff"><img src="/{{row['photo']}}" height="100" width="100"></td>
+				<td bgcolor="grey" style="color: #fff">{{row['phone']}}</td>
+				<td bgcolor="grey" style="color: #fff">{{row['Gender']}}</td>
+				<td bgcolor="grey" style="color: #fff">{{row['Dob']}}</td>
+				<td bgcolor="grey" style="color: #fff">{{row['Latitude']}}</td>
+				<td bgcolor="grey" style="color: #fff">{{row['Longitude']}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>	
+	</table>
+</form>
+<br><br><br>
+{% include 'footer.html' %}
